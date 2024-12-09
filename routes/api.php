@@ -38,7 +38,7 @@ Route::get('/search', function (Request $request) {
 
     $data = $response->json();
     $cepData = Cep::create([
-        'cep' => $data['cep'],
+        'cep' => str_replace('-', '', $data['cep']),
         'logradouro' => $data['logradouro'] ?? null,
         'bairro' => $data['bairro'] ?? null,
         'localidade' => $data['localidade'] ?? null,
