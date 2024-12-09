@@ -27,12 +27,13 @@ Siga os passos abaixo para configurar o projeto em sua máquina:
 
 Edite o arquivo .env e configure os dados do seu banco de dados:
 
-`````DB_CONNECTION=mysql
+````env
+DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=nome_do_banco
 DB_USERNAME=usuario
-DB_PASSWORD=senha````
+DB_PASSWORD=senha
 
 4. Gere a chave da aplicação
   `php artisan key:generate`
@@ -75,7 +76,7 @@ Faça uma requisição para a seguinte URL:
    },
    "message": "Dados retornados e salvos no banco de dados."
    }
-`````
+````
 
 ## Funcionalidades
 
