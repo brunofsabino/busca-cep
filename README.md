@@ -27,22 +27,22 @@ Siga os passos abaixo para configurar o projeto em sua máquina:
 
 Edite o arquivo .env e configure os dados do seu banco de dados:
 
-`DB_CONNECTION=mysql
+`````DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=nome_do_banco
 DB_USERNAME=usuario
-DB_PASSWORD=senha`
+DB_PASSWORD=senha````
 
 4. Gere a chave da aplicação
-   `php artisan key:generate`
+  `php artisan key:generate`
 
 5. Crie o banco de dados
-   Certifique-se de que o banco de dados configurado no .env foi criado.
+  Certifique-se de que o banco de dados configurado no .env foi criado.
 
 6. Execute as migrations
-   Rode o comando para criar as tabelas no banco:
-   `php artisan migrate`
+  Rode o comando para criar as tabelas no banco:
+  `php artisan migrate`
 
 7.Iniciar o projeto criado com Laravel:
 `php artisan serve`
@@ -60,22 +60,22 @@ Faça uma requisição para a seguinte URL:
 
 -   Parâmetro: `cep` (obrigatório)
 -   Resposta (exemplo):
-    ```{
-    "status": true,
-    "data": {
-    "cep": "03550-000",
-    "logradouro": "Rua Colatina",
-    "bairro": "Cidade Patriarca",
-    "localidade": "São Paulo",
-    "uf": "SP",
-    "ddd": "11",
-    "updated_at": "2024-12-09T20:22:58.000000Z",
-    "created_at": "2024-12-09T20:22:58.000000Z",
-    "id": 3
-    },
-    "message": "Dados retornados e salvos no banco de dados."
-    }
-    ```
+   ```{
+   "status": true,
+   "data": {
+   "cep": "03550-000",
+   "logradouro": "Rua Colatina",
+   "bairro": "Cidade Patriarca",
+   "localidade": "São Paulo",
+   "uf": "SP",
+   "ddd": "11",
+   "updated_at": "2024-12-09T20:22:58.000000Z",
+   "created_at": "2024-12-09T20:22:58.000000Z",
+   "id": 3
+   },
+   "message": "Dados retornados e salvos no banco de dados."
+   }
+`````
 
 ## Funcionalidades
 
@@ -94,3 +94,7 @@ Faça uma requisição para a seguinte URL:
 -   Routes: As rotas estão definidas no arquivo `routes/web.php`.
 -   Controllers: O projeto utiliza closures na rota `/search` para consultas simples.
 -   Migrations: Arquivos para criação de tabelas no banco estão em `database/migrations`
+
+```
+
+```
