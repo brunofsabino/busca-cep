@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/search', function (Request $request) {
     $cep = $request->query('cep');
 
-    // Valida se o CEP foi informado
+
     if (!$cep || !preg_match('/^[0-9]{8}$/', $cep)) {
         return response()->json([
             'status' => false,
@@ -25,10 +25,8 @@ Route::get('/search', function (Request $request) {
         ]);
     }
 
-    // Faz a requisição para a API ViaCEP
     $response = Http::get("https://viacep.com.br/ws/{$cep}/json/");
 
-    // Verifica se a resposta foi bem-sucedida
     if ($response->failed() || isset($response['erro'])) {
         return response()->json([
             'status' => false,
@@ -46,7 +44,7 @@ Route::get('/search', function (Request $request) {
         'ddd' => $data['ddd'] ?? null,
     ]);
 
-    // Retorna a resposta da ViaCEP no formato JSON
+
     return response()->json([
         'status' => true,
         'data' => $cepData,
